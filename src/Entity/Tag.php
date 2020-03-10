@@ -28,7 +28,7 @@ class Tag
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=128, unique=true)
      * @Gedmo\Slug(fields={"name"})
      */
     private $slug;
@@ -48,24 +48,24 @@ class Tag
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getName():  ? string
     {
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
 
         return $this;
     }
 
-    public function getSlug(): ?string
+    public function getSlug():  ? string
     {
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+    public function setSlug(string $slug) : self
     {
         $this->slug = $slug;
 
